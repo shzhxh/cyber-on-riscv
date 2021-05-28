@@ -1,3 +1,6 @@
+#### cyber rt用到的syscall
+
+```
 % time     seconds  usecs/call     calls    errors syscall
 ------ ----------- ----------- --------- --------- ----------------
   6.33    0.002414           5       469           rt_sigprocmask
@@ -37,9 +40,13 @@
   0.03    0.000011          11         1           getpgrp
 ------ ----------- ----------- --------- --------- ----------------
 100.00    0.038126                  1117       144 total
-
+```
 
 #### 对ioctl的使用
+
+```
 ioctl(-1, TIOCGPGRP, 0x7ffd8e50c494)    = -1 EBADF (Bad file descriptor)                
 ioctl(2, TIOCGPGRP, [486])              = 0                                            
 ioctl(3, TCGETS, 0x7ffd8e50c420)        = -1 ENOTTY (Inappropriate ioctl for device) 
+```
+
